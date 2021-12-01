@@ -3,6 +3,9 @@
     "description": "Project that search courses on alura site",
     "type": "library",
     "autoload": {
+        "files": [
+            "functions.php"
+        ],
         "psr-4": {
             "Alura\\SearchCourses\\": "src/"
         }
@@ -39,5 +42,8 @@
     },
     "scripts-descriptions": {
         "check": "Run the checks of codes"
-    }
+    },
+    "license": [
+        "GPL-3.0"
+    ]
 }
