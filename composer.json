@@ -1,0 +1,43 @@
+{
+    "name": "wellingtonmaia/search-courses",
+    "description": "Project that search courses on alura site",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Alura\\SearchCourses\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WellingtonMaia",
+            "email": "maiaweligton@hotmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.4",
+        "symfony/dom-crawler": "^6.0",
+        "symfony/css-selector": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "squizlabs/php_codesniffer": "^3.6",
+        "phan/phan": "^5.3"
+    },
+    "scripts": {
+        "test": "phpunit tests",
+        "cs": "phpcs --standard=PSR12 src/",
+        "phan": "phan --allow-polyfill-parser",
+        "remove-cache": "sudo rm -rf cache",
+        "check": [
+            "@phan",
+            "@cs",
+            "@test"
+        ],
+        "post-update-cmd": [
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Run the checks of codes"
+    }
+}
